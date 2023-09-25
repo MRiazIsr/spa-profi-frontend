@@ -1,0 +1,20 @@
+# Use the LTS version of Node.js as the base image
+FROM node
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy package.json and package-lock.json (if available) to the container
+COPY package*.json ./
+
+# Install app dependencies inside the container
+RUN npm install
+
+# Copy the rest of the application code into the container
+COPY . .
+
+# Expose the port the app will run on
+EXPOSE 3001
+
+# Command to run the application
+CMD ["npm", "start"]
