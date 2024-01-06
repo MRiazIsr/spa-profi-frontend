@@ -3,7 +3,10 @@ import styles from './Home.module.css';
 const Home = () => {
     return (
     <div class={styles.main}>
-      test
+      <div class={styles.box_to_orders}>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in ipsum eget quam rhoncus faucibus. Donec eu vehicula nulla. Vestibulum lacus erat, pretium et eleifend eu, iaculis eu nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+        <input type="button" class={styles.button} value="Products"></input>
+      </div>
     </div>
   )};
   
