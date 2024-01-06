@@ -1,6 +1,6 @@
 :root {
   --box-shadow-properties: 3px 3px 10px 2px rgba(0, 0, 0, 0.2);
-  --box-shadow-properties-white: 3px 3px 10px 2px rgba(228, 197, 238, 0.767);
+  --box-shadow-properties-white: 0px 0px 10px 2px rgba(228, 197, 238, 0.767);
   --border-radius: 10px;
   --text-color: #544a5c91;
   --ligt-text-color: hsla(273, 72%, 86%, 0.993);
