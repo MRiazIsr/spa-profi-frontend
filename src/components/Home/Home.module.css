@@ -1,0 +1,16 @@
+.mainPicture {
+  width: 90%;
+}
+
+.main {
+  margin: 20px 20px 20px 20px;
+  height: 88vh; 
+  background: linear-gradient(to bottom, rgba(166, 98, 255, 0), rgb(241, 215, 252)), url('/public/images/6.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left top;
+  border: 1px;
+  box-shadow: 0 0 1em 0.3em rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
