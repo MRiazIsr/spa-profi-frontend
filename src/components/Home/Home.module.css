@@ -17,7 +17,7 @@
   overflow: hidden;
 }
 
-.box_to_orders {
+.box {
   padding: 5px;
   display: flex;
   justify-content: space-evenly;

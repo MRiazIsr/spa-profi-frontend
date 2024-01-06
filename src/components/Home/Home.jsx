@@ -3,7 +3,7 @@ import styles from './Home.module.css';
 const Home = () => {
     return (
     <div class={styles.main}>
-      <div class={styles.box_to_orders}>
+      <div class={styles.box}>
         <h1>
           PRO.beauty
         </h1>
