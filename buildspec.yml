@@ -15,4 +15,4 @@ phases:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push docker push 937171232889.dkr.ecr.eu-central-1.amazonaws.com/spa-profi-ci:ci-build
+      - docker push 937171232889.dkr.ecr.eu-central-1.amazonaws.com/spa-profi-ci:ci-build
