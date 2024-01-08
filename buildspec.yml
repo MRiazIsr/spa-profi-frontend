@@ -9,10 +9,10 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
-      - docker build -t spa-profi-ci:ci-build .
-      - docker tag spa-profi-ci:ci-build 937171232889.dkr.ecr.eu-central-1.amazonaws.com/spa-profi-ci:ci-build
+      - docker build -t spa-profi:ci-build .
+      - docker tag spa-profi:ci-build 937171232889.dkr.ecr.eu-central-1.amazonaws.com/spa-profi:ci-build
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push 937171232889.dkr.ecr.eu-central-1.amazonaws.com/spa-profi-ci:ci-build
+      - docker push 937171232889.dkr.ecr.eu-central-1.amazonaws.com/spa-profi:ci-build
