@@ -1,8 +1,8 @@
 .header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
+    align-items: baseline;
+    padding: 10px 20px;
     background-color: #f3e7fa;
     color: var(--text-color);
     box-shadow: var(--box-shadow-properties);
@@ -21,7 +21,7 @@
     list-style-type: none;
     padding: 0;
     display: flex;
-    gap: 1rem;
+    gap: 10px;
   }
   
   .nav a {
