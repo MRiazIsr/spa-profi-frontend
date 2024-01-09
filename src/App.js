@@ -1,29 +1,32 @@
-import './App.css';
-import { BrowserRouter, Routes, Route  } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 import Header from "./components/Header/Header"
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
-import Contact from "./components/Contact/Contact";
 import NoPage from "./components/PageNotFound/PageNotFound";
 
-
 function App() {
+  const location = useLocation();
   return (
-    <div className="App">
-      
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Header />}>
-            <Route index element={<Home />} />
-            <Route path="about" element={<About />} />
-            <Route path="contact" element={<Contact />} />
-            <Route path="*" element={<NoPage />} />
-          </Route>
+    <>
+      <Header />
+      <AnimatePresence mode="wait" initial={false}>
+        <Routes location={location} key={location.key} mode="out-in">
+          <Route path="/about" element={<About />} />
+          <Route path="/" element={<Home />} />
+          <Route path="*" element={<NoPage />} />
         </Routes>
-      </BrowserRouter>
-    
-    </div>
+      </AnimatePresence>
+    </>
   );
 }
 
-export default App;
+function WrappedApp() {
+  return (
+    <Router>
+      <App />
+    </Router>
+  );
+}
+
+export default WrappedApp;
