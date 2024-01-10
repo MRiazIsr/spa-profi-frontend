@@ -4,18 +4,18 @@ phases:
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
-      - aws ecr get-login-password --region eu-central-1 | docker login --username AWS --password-stdin 937171232889.dkr.ecr.eu-central-1.amazonaws.com
+      - aws ecr get-login-password --region il-central-1 | docker login --username AWS --password-stdin 937171232889.dkr.ecr.il-central-1.amazonaws.com
   build:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
-      - docker build -t spa-profi:ci-build .
-      - docker tag spa-profi:ci-build 937171232889.dkr.ecr.eu-central-1.amazonaws.com/spa-profi:ci-build
+      - docker build -t pro-beauty .
+      - docker tag pro-beauty:latest 937171232889.dkr.ecr.il-central-1.amazonaws.com/pro-beauty:latest
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push 937171232889.dkr.ecr.eu-central-1.amazonaws.com/spa-profi:ci-build
+      - docker push 937171232889.dkr.ecr.il-central-1.amazonaws.com/pro-beauty:latest
 artifacts:
   files:
-    - '**/*'
+    - "**/*"
