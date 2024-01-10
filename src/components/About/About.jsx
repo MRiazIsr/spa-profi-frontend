@@ -35,17 +35,15 @@ const About = () => {
 
 
     return (
-      <AnimatePresence>
-        <motion.div
-          initial="initial"
-          animate={controls}
-          exit="out"
-          variants={pageVariants}
-          transition={pageTransition}
-        >
-          {'TEST'}
-        </motion.div>
-      </AnimatePresence>
+      <motion.div
+        initial="initial"
+        animate={controls}
+        exit="out"
+        variants={pageVariants}
+        transition={pageTransition}
+      >
+        {'TEST'}
+      </motion.div>
     );
 };
   
