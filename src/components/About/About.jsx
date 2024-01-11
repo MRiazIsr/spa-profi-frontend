@@ -1,29 +1,28 @@
-import { motion, useAnimation, AnimatePresence } from 'framer-motion';
-import React, { useEffect } from 'react';
-
+import { motion, useAnimation, AnimatePresence } from "framer-motion";
+import React, { useEffect } from "react";
 
 const pageTransition = {
   type: "tween",
   ease: "anticipate",
-  duration: 0.5
+  duration: 0.5,
 };
 
 const pageVariants = {
   initial: {
     opacity: 0,
     x: "100vw",
-    pageTransition
+    pageTransition,
   },
   in: {
     opacity: 1,
     x: 0,
-    pageTransition
+    pageTransition,
   },
   out: {
     opacity: 0,
     x: "-100vw",
-    pageTransition
-  }
+    pageTransition,
+  },
 };
 
 const About = () => {
@@ -33,18 +32,17 @@ const About = () => {
     controls.start("in");
   }, [controls]);
 
-
-    return (
-      <motion.div
-        initial="initial"
-        animate={controls}
-        exit="out"
-        variants={pageVariants}
-        transition={pageTransition}
-      >
-        {'TEST'}
-      </motion.div>
-    );
+  return (
+    <motion.div
+      initial="initial"
+      animate={controls}
+      exit="out"
+      variants={pageVariants}
+      transition={pageTransition}
+    >
+      {<div>TEST</div>}
+    </motion.div>
+  );
 };
-  
+
 export default About;
