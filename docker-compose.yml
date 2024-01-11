@@ -1,7 +1,7 @@
 version: '0.1'
 services:
   react-app:
-    image: spa-profi:test-build
+    image: pro-beauty:latest
     build: 
       context: .
       dockerfile: Dockerfile
