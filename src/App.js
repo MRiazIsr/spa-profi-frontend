@@ -6,25 +6,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
 const HomeCosmetics = lazy(() => import("./pages/home/HomeCosmetics"));
-const HomeChristmas = lazy(() => import("./pages/home/HomeChristmas"));
-const HomeBlackFriday = lazy(() => import("./pages/home/HomeBlackFriday"));
-const HomeBlackFridayTwo = lazy(() =>
-  import("./pages/home/HomeBlackFridayTwo")
-);
-const HomeValentinesDay = lazy(() => import("./pages/home/HomeValentinesDay"));
+// const HomeBlackFriday = lazy(() => import("./pages/home/HomeBlackFriday"));
+// const HomeValentinesDay = lazy(() => import("./pages/home/HomeValentinesDay"));
 
 // shop pages
-const ShopGridStandard = lazy(() => import("./pages/shop/ShopGridStandard"));
 const ShopGridFilter = lazy(() => import("./pages/shop/ShopGridFilter"));
-const ShopGridTwoColumn = lazy(() => import("./pages/shop/ShopGridTwoColumn"));
-const ShopGridNoSidebar = lazy(() => import("./pages/shop/ShopGridNoSidebar"));
-const ShopGridFullWidth = lazy(() => import("./pages/shop/ShopGridFullWidth"));
-const ShopGridRightSidebar = lazy(() =>
-  import("./pages/shop/ShopGridRightSidebar")
-);
-const ShopListStandard = lazy(() => import("./pages/shop/ShopListStandard"));
-const ShopListFullWidth = lazy(() => import("./pages/shop/ShopListFullWidth"));
-const ShopListTwoColumn = lazy(() => import("./pages/shop/ShopListTwoColumn"));
 
 // product pages
 const Product = lazy(() => import("./pages/shop-product/Product"));
@@ -86,61 +72,20 @@ const App = () => {
                 path={process.env.PUBLIC_URL + "/home-cosmetics"}
                 element={<HomeCosmetics/>}
               />
-              <Route
-                path={process.env.PUBLIC_URL + "/home-christmas"}
-                element={<HomeChristmas/>}
-              />
-              <Route
+              {/* <Route
                 path={process.env.PUBLIC_URL + "/home-black-friday"}
                 element={<HomeBlackFriday/>}
               />
               <Route
-                path={process.env.PUBLIC_URL + "/home-black-friday-two"}
-                element={<HomeBlackFridayTwo/>}
-              />
-              <Route
                 path={process.env.PUBLIC_URL + "/home-valentines-day"}
                 element={<HomeValentinesDay/>}
-              />
+              /> */}
 
               {/* Shop pages */}
               <Route
-                path={process.env.PUBLIC_URL + "/shop-grid-standard"}
-                element={<ShopGridStandard/>}
-              />
-              <Route
-                path={process.env.PUBLIC_URL + "/shop-grid-filter"}
+                path={process.env.PUBLIC_URL + "/products"}
                 element={<ShopGridFilter/>}
               />
-              <Route
-                path={process.env.PUBLIC_URL + "/shop-grid-two-column"}
-                element={<ShopGridTwoColumn/>}
-              />
-              <Route
-                path={process.env.PUBLIC_URL + "/shop-grid-no-sidebar"}
-                element={<ShopGridNoSidebar/>}
-              />
-              <Route
-                path={process.env.PUBLIC_URL + "/shop-grid-full-width"}
-                element={<ShopGridFullWidth/>}
-              />
-              <Route
-                path={process.env.PUBLIC_URL + "/shop-grid-right-sidebar"}
-                element={<ShopGridRightSidebar/>}
-              />
-              <Route
-                path={process.env.PUBLIC_URL + "/shop-list-standard"}
-                element={<ShopListStandard/>}
-              />
-              <Route
-                path={process.env.PUBLIC_URL + "/shop-list-full-width"}
-                element={<ShopListFullWidth/>}
-              />
-              <Route
-                path={process.env.PUBLIC_URL + "/shop-list-two-column"}
-                element={<ShopListTwoColumn/>}
-              />
-
               {/* Shop product pages */}
               <Route
                 path={process.env.PUBLIC_URL + "/product/:id"}
